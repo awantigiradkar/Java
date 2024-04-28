@@ -1,30 +1,41 @@
-package aa1;
+package aa3;
 
-public class Student {
-	int StudentId;
+public abstract  class Student implements PlacementInterface{
+	int sid;
 	String name;
-	float mark;
-	String course;
-	String subject_name;
-	String result = null;
-	String reccee;
+	String address;
+	int age;
+	String course_name;
+	String college_name;
+	abstract void findResult();
 	
-	public Student(int StudentId, String name, float mark, String course, String subject_name, String result,
-			String reccee) {
+	public Student(int sid, String name, String address, int age, String course_name, String college_name) {
 		super();
-		this.StudentId = StudentId;
+		this.sid = sid;
 		this.name = name;
-		this.mark = mark;
-		this.course = course;
-		this.subject_name = subject_name;
-		this.result = result;
-		this.reccee = reccee;
+		this.address = address;
+		this.age = age;
+		this.course_name = course_name;
+		this.college_name = college_name;
 	}
+
 	
-	public void dispStudent() {
-		System.out.println(StudentId+" "+name+" "+mark+" "+course+" "+subject_name+" "+result+" "+reccee+" ");
+	void dispStudent() {
+		System.out.println(sid+" "+name+" "+address+" "+age+" "+course_name+" "+college_name);
 	}
-	
+
+//	@Override
+//	public void PlacementPercentage() {
+//		ITStudent.
+//		System.out.println("Placement percentage is very high");
+//		
+//	}
+	abstract void findTotal();
+	abstract void calculatePercentage();
+
 	
 
+	
+
+	
 }
