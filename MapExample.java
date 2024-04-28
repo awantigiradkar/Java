@@ -1,29 +1,63 @@
-import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 
-public class Employee implements Serializable
+public class MapExample 
 {
 
-	int id;
-	String name;
-	float sal;
-	public Employee(int id, String name, float sal) {
-		
-		this.id = id;
-		this.name = name;
-		this.sal = sal;
-	}
-	
-	
-//	@Override
-//	public String toString() {
-//		return "Employee [id=" + id + ", name=" + name + ", sal=" + sal + "]";
-//	}
-	
-	
-	void dispEmployee()
+	public static void main(String[] args) 
 	{
-		System.out.println(id+" " +name+ " "+sal);
+	
 		
+		HashMap<Integer, String> hm = new HashMap<>();
+		
+		
+		hm.put(1, "sunbeam DBDA");
+		hm.put(2, "cdac pune DBDA");
+		hm.put(3, "CDAC Blr");
+		hm.put(4, "KNOW IT DBDA");
+		hm.put(5, "CDAC MUMBAI DBDA");
+		
+		System.out.println(hm);
+		
+		String cname=hm.get(3);
+		System.out.println(cname);
+		
+		
+		for( Map.Entry<Integer, String> m : hm.entrySet())
+			
+		{
+			System.out.println(m.getKey() +" "+m.getValue());
+			
+			
+		}
+		
+		System.out.println("update");
+		
+		hm.put(2, "cdac bangalore dac");
+		
+for( Map.Entry<Integer, String> m : hm.entrySet())
+			
+		{
+			System.out.println(m.getKey() +" "+m.getValue());
+			
+			
+		}
+		
+		System.out.println("delete");
+
+		   hm.remove(2);
+		   for( Map.Entry<Integer, String> m : hm.entrySet())
+				
+			{
+				System.out.println(m.getKey() +" "+m.getValue());
+				
+				
+			}
+
+		   
+		   
+		   
 	}
 	
 	
