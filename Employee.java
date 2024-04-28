@@ -1,6 +1,5 @@
-import java.io.Serializable;
 
-public class Employee implements Serializable
+public class Employee 
 {
 
 	int id;
@@ -13,17 +12,9 @@ public class Employee implements Serializable
 		this.sal = sal;
 	}
 	
-	
-//	@Override
-//	public String toString() {
-//		return "Employee [id=" + id + ", name=" + name + ", sal=" + sal + "]";
-//	}
-	
-	
-	void dispEmployee()
+	void display()
 	{
-		System.out.println(id+" " +name+ " "+sal);
-		
+		System.out.println(id+name+sal);
 	}
 	
 	
